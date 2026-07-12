@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WITHOUT WITNESS · Sense testimoni — MONOMO, Barcelona (Gràcia)</title>
+<meta name="description" content="WITHOUT WITNESS — опен-колл студии автопортрета MONOMO. 180 минут, один, 36 кадров без отбора. Дата-рум Цикла I.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+<script>if(/^#0[0-8]$/.test(location.hash)){document.documentElement.className='deeplink';}</script>
+<style>
+:root{
+  --true-black:#000000; --oxide:#C24E34; --oxide-text:#D2634A;
+  --status-done:#8A9A5B; --status-work:#BE9A45; --status-block:#C24E34;
+  --measure:38rem;
+  --gut:clamp(10px,1.1vw,20px); --margin:clamp(20px,4.5vw,72px); --maxw:1680px;
+  --display:"Big Shoulders Display","Arial Narrow",sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  /* default (dark) theme vars — overridden per section */
+  --bg:#0C0B09; --fg:#ECE4D6; --muted:#B8AF9E; --faint:#8C8474; --line:#2A2720; --surface:#151311;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:#0C0B09; color:#ECE4D6; font-family:var(--serif); font-size:18px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; font-variant-numeric:tabular-nums}
+::selection{background:var(--oxide); color:#EDE6D8}
+img{max-width:100%; display:block}
+.view{display:none} .view.active{display:block}
+.deeplink #landing{display:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;padding:0;margin:-1px;border:0}
+
+/* ---------- THEME UTILITIES ---------- */
+.sect{background:var(--bg); color:var(--fg)}
+.sect--dark{--bg:#0C0B09; --fg:#ECE4D6; --muted:#B8AF9E; --faint:#8C8474; --line:#2A2720; --surface:#151311}
+.sect--light{--bg:#EDE6D8; --fg:#0C0B09; --muted:#4A453C; --faint:#6E675A; --line:#CFC6B4; --surface:#E4DBCB}
+
+/* ---------- GRID ---------- */
+.wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:var(--margin)}
+.grid{display:grid; grid-template-columns:repeat(36,1fr); column-gap:var(--gut)}
+.band{padding:clamp(64px,9vw,150px) 0; border-top:1px solid var(--line)}
+.band:first-child{border-top:none}
+
+/* ---------- TYPE ---------- */
+.display{font-family:var(--display); text-transform:uppercase; letter-spacing:-.005em; line-height:.86; font-weight:700; margin:0}
+.display--hero{font-weight:900}
+.display--xl{font-size:clamp(64px,15vw,260px)}
+.display--l{font-size:clamp(48px,10vw,150px)}
+.display--m{font-size:clamp(34px,6vw,88px)}
+.display--sub{font-weight:500; font-size:clamp(20px,3vw,40px); line-height:.92}
+.eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.tc{font-family:var(--mono); font-size:13px; letter-spacing:.02em; color:var(--faint); font-variant-numeric:tabular-nums}
+.lead{font-family:var(--serif); font-size:clamp(19px,1.7vw,23px); line-height:1.5; color:var(--muted); max-width:var(--measure); margin:0}
+.body{font-family:var(--serif); max-width:var(--measure)}
+.body p{margin:0 0 .9em}
+
+/* ---------- MAST (landing) ---------- */
+.mast{position:sticky; top:0; z-index:40; background:#0C0B09; color:#ECE4D6; border-bottom:1px solid #2A2720}
+.mast .grid{align-items:center; padding-block:14px}
+.mast .m-logo{grid-column:span 8; display:flex; align-items:center}
+.mast .m-logo img{height:26px; width:auto}
+.mast .m-brand{grid-column:14 / 24; text-align:center; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#8C8474}
+.mast .m-cta{grid-column:28 / 37; display:flex; justify-content:flex-end}
+.btn{font-family:var(--mono); font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg);
+  border:1px solid currentColor; background:transparent; padding:11px 18px; cursor:pointer; text-decoration:none;
+  display:inline-flex; align-items:center; gap:10px; transition:background .2s,color .2s}
+.btn .dot{width:7px; height:7px; background:var(--oxide); display:inline-block}
+.btn:hover,.btn:focus-visible{background:var(--fg); color:var(--bg); outline:none}
+.btn:focus-visible{outline:2px solid var(--oxide); outline-offset:2px}
+.mast .btn{border-color:#3A352D; color:#ECE4D6}
+.mast .btn:hover{background:#ECE4D6; color:#0C0B09}
+
+/* ---------- HERO ---------- */
+.hero{min-height:92vh; display:flex; align-items:center}
+.hero .grid{width:100%; align-items:center; row-gap:40px}
+.hero .h-mark{grid-column:1 / 27}
+.hero .h-mark img{width:100%; max-width:min(820px,70vw); height:auto}
+.hero .h-num{grid-column:28 / 37; text-align:right; align-self:end}
+.hero .h-num .n{font-family:var(--display); font-weight:900; text-transform:uppercase; line-height:.8; font-size:clamp(90px,15vw,260px); display:block; color:var(--fg)}
+.hero .h-num .cap{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); display:block; margin-top:6px}
+.hero .h-foot{grid-column:1 / 30; margin-top:8px}
+.hero .h-foot .eyebrow{display:block}
+.hero .h-foot .clock{margin-top:10px}
+
+/* ---------- MANIFEST (light) ---------- */
+.manifest .word{grid-column:1 / 25}
+.manifest .word .display{color:var(--fg)}
+.manifest .word .display .o{color:var(--oxide)}
+.manifest .say{grid-column:26 / 37; align-self:end}
+.manifest .say .lead{color:var(--muted)}
+
+/* ---------- SECTION HEADER ---------- */
+.shead{grid-column:1 / 37; display:flex; align-items:baseline; gap:22px; margin-bottom:clamp(28px,4vw,56px)}
+.shead .num{font-family:var(--mono); font-size:13px; color:var(--faint); letter-spacing:.06em}
+.shead .rule{flex:1; height:1px; background:var(--line)}
+.shead .lbl{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+
+/* ---------- GENOME / CONTACT SHEET ---------- */
+.genome .g-title{grid-column:1 / 15}
+.genome .g-title .display{color:var(--fg)}
+.genome .g-title .sub{font-family:var(--mono); font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); margin-top:14px}
+.sheet-wrap{grid-column:1 / 37; margin-top:clamp(20px,3vw,40px)}
+.sheet{display:grid; grid-template-columns:repeat(6,1fr); gap:var(--gut)}
+.sheet .cell{position:relative; aspect-ratio:1/1; border:1px solid var(--line); background:var(--surface); overflow:hidden; transition:background-color .18s ease,border-color .18s ease}
+.sheet .cell .fill{position:absolute; inset:0; background:var(--true-black)}
+.sheet .cell .ct{position:absolute; left:7px; bottom:6px; font-family:var(--mono); font-size:9px; color:var(--faint); opacity:.6}
+.sheet.sealed .cell .fill{opacity:1}
+.sheet.reveal .cell .fill{opacity:1; transition:opacity .18s ease-out, transform .18s ease-out}
+.sheet.reveal .cell.open .fill{opacity:0; transform:translateY(-3px)}
+.sheet.reveal .cell.open{background:#26221C; border-color:#3b352d}
+
+/* ---------- PROTOCOL (light) ---------- */
+.protocol .p-nums{grid-column:1 / 15}
+.protocol .p-nums .row{display:flex; align-items:baseline; gap:16px; border-bottom:1px solid var(--line); padding:14px 0}
+.protocol .p-nums .row:first-child{border-top:1px solid var(--line)}
+.protocol .p-nums .big{font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:clamp(40px,5vw,72px); line-height:.85; color:var(--fg)}
+.protocol .p-nums .lab{font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.protocol .p-steps{grid-column:16 / 37}
+.step{display:grid; grid-template-columns:auto 1fr; gap:22px; padding:20px 0; border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .k{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); min-width:104px}
+.step .k .n{display:block; color:var(--fg); font-size:14px; margin-bottom:4px}
+.step h4{margin:0 0 6px; font-family:var(--serif); font-weight:500; font-size:21px}
+.step p{margin:0; color:var(--muted); font-size:16px; line-height:1.55; max-width:54ch}
+
+/* ---------- FIRST DISCLOSURE (dark + oxide) ---------- */
+.disclose .d-title{grid-column:1 / 20}
+.disclose .d-title .display{color:var(--fg)}
+.disclose .d-title .display .o{color:var(--oxide)}
+.disclose .d-sheet{grid-column:1 / 22; margin-top:clamp(20px,3vw,38px)}
+.disclose .d-note{grid-column:23 / 37; align-self:center; margin-top:clamp(20px,3vw,38px)}
+.embargo{display:inline-block; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--fg);
+  background:var(--true-black); padding:6px 12px; margin-bottom:20px; border:1px solid var(--oxide)}
+.disclose .d-note .lead{color:var(--muted)} .disclose .d-note .lead strong{color:var(--fg); font-weight:500}
+
+/* ---------- LINEAGE (light) ---------- */
+.lineage .lin{grid-column:span 9; border-top:2px solid var(--fg); padding-top:16px}
+.lineage .lin .yr{font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--oxide)}
+.lineage .lin h4{margin:8px 0 4px; font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:clamp(20px,2vw,30px); line-height:.9; color:var(--fg)}
+.lineage .lin p{margin:10px 0 0; font-size:14px; line-height:1.5; color:var(--muted)}
+@media(max-width:900px){ .lineage .lin{grid-column:span 18} }
+
+/* ---------- PARTICIPATE (dark) ---------- */
+.participate .q{grid-column:1 / 19}
+.participate .q .display{color:var(--fg)}
+.participate .ask{grid-column:1 / 19; margin-top:26px; font-family:var(--serif); font-style:italic; font-size:clamp(22px,2.4vw,32px); line-height:1.3; color:var(--fg); max-width:20ch}
+.participate .form{grid-column:20 / 37}
+.field{display:grid; grid-template-columns:40px 1fr; gap:18px; padding:18px 0; border-top:1px solid var(--line)}
+.field:last-of-type{border-bottom:1px solid var(--line)}
+.field .fn{font-family:var(--mono); font-size:13px; color:var(--faint)}
+.field .ft{font-size:16px; color:var(--muted)} .field .ft b{color:var(--fg); font-weight:500}
+.participate .terms{grid-column:20 / 37; margin-top:22px; font-family:var(--mono); font-size:12px; line-height:1.8; letter-spacing:.02em; color:var(--faint)}
+.participate .terms .btn{margin-top:18px}
+
+/* ---------- FOOTER ---------- */
+.foot{background:#0C0B09; color:#ECE4D6; padding:clamp(60px,8vw,110px) 0 70px; border-top:1px solid #2A2720}
+.foot .f-mark{grid-column:1 / 22} .foot .f-mark img{width:100%; max-width:640px; height:auto; opacity:.96}
+.foot .f-meta{grid-column:24 / 37; align-self:end; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8C8474; line-height:2}
+.foot .f-meta a{color:#B8AF9E; text-decoration:none; border-bottom:1px solid #2A2720} .foot .f-meta a:hover{color:#ECE4D6}
+
+/* ---------- rise ---------- */
+.rise{opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s cubic-bezier(.2,.6,.2,1)}
+.rise.in{opacity:1; transform:none}
+
+/* ======================================================= DATA ROOM ======================================================= */
+#dataroom{background:#0C0B09; color:#ECE4D6}
+#dataroom{--bg:#0C0B09; --fg:#ECE4D6; --muted:#B8AF9E; --faint:#8C8474; --line:#2A2720; --surface:#151311}
+.dr-mast{position:sticky; top:0; z-index:30; background:rgba(12,11,9,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.dr-mast .grid{align-items:center; padding-block:14px}
+.dr-mast .dm-logo{grid-column:span 8; display:flex; align-items:center} .dr-mast .dm-logo img{height:30px; width:auto; flex:0 0 auto}
+.dr-mast .dm-c{grid-column:14 / 24; text-align:center; font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+.dr-mast .dm-x{grid-column:28 / 37; display:flex; justify-content:flex-end}
+.dr-exit{font-family:var(--mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:1px solid var(--line); padding:9px 15px; transition:color .2s,border-color .2s}
+.dr-exit:hover{color:var(--fg); border-color:var(--faint)}
+.dr-body{padding-bottom:120px}
+.dr-rail{grid-column:1 / 7; position:sticky; top:88px; align-self:start}
+.dr-col{grid-column:8 / 28; min-width:0}
+.dr-margin{grid-column:29 / 37}
+.progress36{display:grid; grid-template-columns:repeat(6,1fr); gap:3px; margin:16px 0 26px; max-width:150px}
+.progress36 span{aspect-ratio:1/1; background:var(--surface); border:1px solid var(--line)}
+.progress36 span.on{background:var(--fg)} .progress36 span.cur{background:var(--oxide)}
+.dr-index{list-style:none; margin:0; padding:0}
+.dr-index li a{display:flex; gap:11px; align-items:baseline; padding:9px 0 9px 14px; text-decoration:none; border-left:2px solid transparent;
+  font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--faint); transition:color .2s,border-color .2s}
+.dr-index li a .ix{color:var(--faint)} .dr-index li a:hover{color:var(--muted)}
+.dr-index li a.active{color:var(--fg); border-left-color:var(--oxide)} .dr-index li a.active .ix{color:var(--oxide-text)}
+.doc{padding:74px 0 40px; border-top:1px solid var(--line); scroll-margin-top:88px}
+.doc:first-child{border-top:none; padding-top:34px}
+.doc-mini{display:grid; grid-template-columns:repeat(6,1fr); gap:2px; width:66px; margin-bottom:22px}
+.doc-mini span{aspect-ratio:1/1; background:var(--true-black); border:1px solid var(--line)} .doc-mini span.b{background:var(--surface)}
+.doc-grief{display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; margin:0 0 16px}
+.doc-grief .g{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)} .doc-grief .g .num{color:var(--fg)}
+.chip{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); border:1px solid var(--line); padding:4px 9px; background:var(--surface)}
+.chip .sq{width:7px;height:7px;display:inline-block}
+.chip.done .sq{background:var(--status-done)} .chip.work .sq{background:var(--status-work)} .chip.block .sq{background:var(--status-block)} .chip.block{color:var(--fg)}
+h1.doc-h1{font-family:var(--serif); font-weight:500; font-size:clamp(26px,3.4vw,33px); line-height:1.15; letter-spacing:-.01em; margin:6px 0 22px; color:var(--fg)}
+.doc-lead{font-family:var(--serif); font-size:21px; line-height:1.55; color:var(--muted); margin:0 0 10px}
+.dr-col h2{font-family:var(--mono); font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--fg); margin:44px 0 16px; padding-bottom:10px; border-bottom:1px solid var(--line)}
+.dr-col h3{font-family:var(--serif); font-weight:500; font-size:19px; line-height:1.35; margin:32px 0 10px; color:var(--fg)}
+.dr-col p{margin:0 0 .9em; max-width:var(--measure)}
+.dr-col strong{color:var(--fg); font-weight:600} .dr-col em{color:var(--muted)}
+.dr-col ul,.dr-col ol{margin:0 0 1.1em; padding-left:1.3em; max-width:var(--measure)} .dr-col li{margin:0 0 .5em; line-height:1.55}
+.dr-col a{color:var(--fg); text-decoration:none; border-bottom:1px solid var(--line)} .dr-col a:hover{border-color:var(--oxide)}
+.dr-col code{font-family:var(--mono); font-size:.86em; background:var(--surface); padding:1px 5px; border:1px solid var(--line)}
+blockquote.obj{margin:26px 0; padding:2px 0 2px 26px; border-left:2px solid var(--oxide); max-width:var(--measure)}
+blockquote.obj .src{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); margin-bottom:14px}
+blockquote.obj p{font-family:var(--serif); font-style:italic; font-size:19px; line-height:1.55; color:var(--fg); margin:0 0 .7em}
+blockquote.note{margin:22px 0; padding-left:22px; border-left:1px solid var(--line); max-width:var(--measure)}
+blockquote.note p{font-style:italic; color:var(--muted); font-size:16px; margin:0}
+.tablewrap{overflow-x:auto; margin:22px 0; border:1px solid var(--line); max-width:100%}
+table{border-collapse:collapse; width:100%; min-width:520px; background:var(--surface)}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+thead th{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:500; background:var(--bg)}
+td{font-family:var(--serif); font-size:15px; line-height:1.45; color:var(--muted)}
+td.mono,th.mono{font-family:var(--mono); font-size:13px; font-variant-numeric:tabular-nums}
+td.num{text-align:right; font-family:var(--mono); font-size:13px; font-variant-numeric:tabular-nums; color:var(--muted); white-space:nowrap}
+tr:last-child td{border-bottom:none} td strong,.total td{color:var(--fg); font-weight:600}
+.callout{background:var(--surface); border:1px solid var(--line); border-left:2px solid var(--oxide); padding:18px 22px; margin:22px 0; max-width:var(--measure)}
+.callout .k{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--oxide-text); margin-bottom:8px} .callout p{margin:0; font-size:16px; color:var(--muted)}
+.docnav{display:flex; justify-content:space-between; gap:20px; margin-top:40px; padding-top:24px; border-top:1px solid var(--line)}
+.docnav a{font-family:var(--mono); font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); text-decoration:none} .docnav a:hover{color:var(--fg)}
+.dr-margin .mnote{position:sticky; top:110px; font-family:var(--mono); font-size:12px; line-height:1.7; color:var(--faint); letter-spacing:.02em}
+.doc:focus{outline:none}
+a:focus-visible,button:focus-visible,.dr-index a:focus-visible,.dr-exit:focus-visible,.docnav a:focus-visible,.dr-col a:focus-visible,.foot a:focus-visible{outline:2px solid var(--oxide); outline-offset:2px}
+.dr-index a:focus-visible,.docnav a:focus-visible{color:var(--fg)}
+
+/* ---------- RESPONSIVE: 36 -> 12 -> 6 ---------- */
+@media(max-width:1023px){
+  .hero .h-mark{grid-column:1 / 37} .hero .h-num{grid-column:1 / 37; text-align:left; margin-top:20px} .hero .h-foot{grid-column:1/37}
+  .manifest .word,.manifest .say{grid-column:1 / 37} .manifest .say{margin-top:24px}
+  .genome .g-title{grid-column:1/37}
+  .protocol .p-nums,.protocol .p-steps{grid-column:1 / 37} .protocol .p-steps{margin-top:26px}
+  .disclose .d-title,.disclose .d-sheet,.disclose .d-note{grid-column:1 / 37}
+  .participate .q,.participate .ask,.participate .form,.participate .terms{grid-column:1 / 37}
+  .participate .form{margin-top:26px}
+  .dr-rail{grid-column:1 / 37; position:static} .dr-col{grid-column:1 / 37} .dr-margin{display:none}
+  .foot .f-mark{grid-column:1/37} .foot .f-meta{grid-column:1/37; margin-top:26px}
+  .mast .m-brand{display:none} .mast .m-logo{grid-column:span 20} .mast .m-cta{grid-column:span 16}
+  .dr-mast .dm-c{display:none} .dr-mast .dm-logo{grid-column:span 18} .dr-mast .dm-x{grid-column:span 18}
+}
+@media(max-width:640px){
+  :root{--margin:20px}
+  body{font-size:17px}
+  .hero{min-height:auto; padding-top:60px}
+  .hero .h-mark img{max-width:100%}
+  .band{padding:60px 0}
+  .step{grid-template-columns:1fr; gap:8px} .field{grid-template-columns:1fr; gap:6px}
+  .dr-rail{position:sticky; top:52px; z-index:20; background:var(--bg); margin-inline:calc(var(--margin)*-1); padding:12px var(--margin); border-bottom:1px solid var(--line)}
+  .progress36{display:none}
+  .dr-index{display:flex; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .dr-index li a{min-height:44px; display:flex; align-items:center; padding:11px 12px; border-left:none; border-bottom:2px solid transparent; white-space:nowrap}
+  .dr-index li a.active{border-left:none; border-bottom-color:var(--oxide)}
+  .doc{scroll-margin-top:112px}
+  .dr-exit{padding:12px 16px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise{opacity:1; transform:none; transition:none}
+  *{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ LANDING ============================ -->
+<div id="landing" class="view active">
+  <header class="mast">
+    <div class="wrap"><div class="grid">
+      <div class="m-logo"><img src="assets/wordmark.png" alt="WITHOUT WITNESS" width="1500" height="832"></div>
+      <div class="m-brand">Sense testimoni · Cicle I</div>
+      <div class="m-cta"><a class="btn" href="#00" data-open-dr><span class="dot"></span>DATA ROOM</a></div>
+    </div></div>
+  </header>
+
+  <main>
+  <!-- HERO (dark) -->
+  <section class="hero sect sect--dark">
+    <div class="wrap"><div class="grid">
+      <h1 class="sr-only">WITHOUT WITNESS — Sense testimoni, опен-колл студии автопортрета MONOMO, Барселона</h1>
+      <div class="h-mark"><img src="assets/wordmark.png" alt="WITHOUT WITNESS" width="1500" height="832" loading="eager"></div>
+      <div class="h-num"><span class="n">36</span><span class="cap">Frames · No selection</span></div>
+      <div class="h-foot">
+        <span class="eyebrow">Sense testimoni · MONOMO · Gràcia, Barcelona · Cicle I · Open Call</span>
+        <div class="clock tc" data-tc="180:00:00">180:00:00 — 36 FRAMES — 01 REVEAL</div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- MANIFEST (light) -->
+  <section class="band manifest sect sect--light">
+    <div class="wrap"><div class="grid">
+      <div class="shead rise"><span class="num">01</span><span class="lbl">Manifest</span><span class="rule"></span><span class="lbl">180:00:00</span></div>
+      <div class="word rise"><p class="display display--l">WITHOUT<br>THE <span class="o">WITNESS</span></p></div>
+      <div class="say rise"><p class="lead">Художник проводит 180 минут один в закрытой студии перед зеркалом; камера за зеркалом делает ровно 36 кадров в случайные моменты; все 36 показываются целиком — без отбора и отбраковки; автор впервые видит их на вернисаже, вместе с публикой.</p></div>
+    </div></div>
+  </section>
+
+  <!-- GENOME 36 (dark) -->
+  <section class="band genome sect sect--dark">
+    <div class="wrap"><div class="grid">
+      <div class="shead rise"><span class="num">02</span><span class="lbl">The genome</span><span class="rule"></span><span class="lbl">6 × 6 = 36</span></div>
+      <div class="g-title rise"><p class="display display--m">THIRTY<br>SIX<br>FRAMES</p><p class="sub">Свидетель без записи · запись без свидетеля</p></div>
+      <div class="sheet-wrap rise"><div class="sheet sealed" id="genomeSheet" aria-hidden="true"></div></div>
+    </div></div>
+  </section>
+
+  <!-- PROTOCOL (light) -->
+  <section class="band protocol sect sect--light">
+    <div class="wrap"><div class="grid">
+      <div class="shead rise"><span class="num">03</span><span class="lbl">The protocol</span><span class="rule"></span><span class="lbl">Пуассон · мин. 60 с</span></div>
+      <div class="p-nums rise">
+        <div class="row"><span class="big">180</span><span class="lab">минут<br>один</span></div>
+        <div class="row"><span class="big">36</span><span class="lab">кадров<br>без отбора</span></div>
+        <div class="row"><span class="big">01</span><span class="lab">машина<br>без оператора</span></div>
+      </div>
+      <div class="p-steps rise">
+        <div class="step"><div class="k"><span class="n">01</span>Вход</div><div><h4>Дверь закрывается</h4><p>Художник сдаёт телефон, часы и любую съёмочную технику. От руки записывает время входа. Дверь закрывается.</p></div></div>
+        <div class="step"><div class="k"><span class="n">02</span>180 мин</div><div><h4>Один, перед зеркалом</h4><p>В комнату можно внести всё, что художник принесёт сам. Свет постоянный, невыключаемый штатно. Часов в комнате нет.</p></div></div>
+        <div class="step"><div class="k"><span class="n">03</span>36 кадров</div><div><h4>В случайные моменты</h4><p>Число объявлено заранее, моменты не известны никому: расписание генерирует машина до входа. Затвор беззвучный. Экспозиция фиксирована — темнота печатается чёрным.</p></div></div>
+        <div class="step"><div class="k"><span class="n">04</span>Выход</div><div><h4>Протокол не останавливается</h4><p>Оставшиеся кадры снимают пустую комнату и печатаются наравне со всеми. На выходе художник записывает от руки время выхода.</p></div></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- FIRST DISCLOSURE (dark + oxide) -->
+  <section class="band disclose sect sect--dark" id="revealSection">
+    <div class="wrap"><div class="grid">
+      <div class="shead rise"><span class="num">04</span><span class="lbl">First disclosure</span><span class="rule"></span><span class="lbl">01 REVEAL</span></div>
+      <div class="d-title rise"><p class="display display--hero display--l">FIRST<br><span class="o">DISCLOSURE</span></p></div>
+      <div class="d-sheet"><div class="sheet sealed" id="revealSheet" aria-hidden="true"></div></div>
+      <div class="d-note rise">
+        <span class="embargo">EMBARGO · ██ · 01 REVEAL</span>
+        <p class="lead"><strong>Произведение — не панель, а момент её раскрытия.</strong> Автор впервые встречает свои 36 непойманных кадров на вернисаже, одновременно с публикой. Свидетель, изъятый на 180 минут, возвращается залпом. Часть кадров чёрные — темнота печатается чёрным.</p>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- LINEAGE (light) -->
+  <section class="band lineage sect sect--light">
+    <div class="wrap"><div class="grid">
+      <div class="shead rise"><span class="num">05</span><span class="lbl">Lineage</span><span class="rule"></span><span class="lbl">1971 — 2000</span></div>
+      <div class="lin rise"><span class="yr">Venezia · 1972</span><h4>Franco<br>Vaccari</h4><p><em>Esposizione in tempo reale n. 4</em> — фотоавтомат без оператора, показ всех лент без отбора.</p></div>
+      <div class="lin rise"><span class="yr">1998–2000</span><h4>Shizuka<br>Yokomizo</h4><p><em>Dear Stranger</em> — согласие как архитектура съёмки.</p></div>
+      <div class="lin rise"><span class="yr">1980–81</span><h4>Tehching<br>Hsieh</h4><p><em>One Year Performance</em> — протокол и время как форма.</p></div>
+      <div class="lin rise"><span class="yr">1971–72</span><h4>Ugo<br>Mulas</h4><p><em>Verifiche</em> — ролик целиком, без кадрирования опыта.</p></div>
+    </div></div>
+  </section>
+
+  <!-- PARTICIPATE (dark) -->
+  <section class="band participate sect sect--dark">
+    <div class="wrap"><div class="grid">
+      <div class="shead rise"><span class="num">06</span><span class="lbl">Participate · Cicle I</span><span class="rule"></span><span class="lbl">5–8 · Barcelona</span></div>
+      <div class="q rise"><p class="display display--m">OPEN<br>CALL</p></div>
+      <p class="ask rise">«Что ты будешь делать три часа наедине с собой?»</p>
+      <div class="form rise">
+        <div class="field"><span class="fn">01</span><span class="ft"><b>Имя.</b></span></div>
+        <div class="field"><span class="fn">02</span><span class="ft"><b>Ссылка на практику</b> — сайт или профиль, свободная форма.</span></div>
+        <div class="field"><span class="fn">03</span><span class="ft"><b>Ответ на один вопрос</b> — до 150 слов. Не публикуется.</span></div>
+      </div>
+      <p class="terms rise">5–8 художников · Барселона · без гонораров · без внешнего жюри.<br>Состав участников определяет студия. Заявка не гарантирует участия.<br>Основатель студии проходит тот же протокол наравне с приглашёнными.<br><a class="btn" href="#00" data-open-dr><span class="dot"></span>ИЗУЧИТЬ DATA ROOM</a></p>
+    </div></div>
+  </section>
+  </main>
+
+  <!-- FOOTER (dark) -->
+  <footer class="foot">
+    <div class="wrap"><div class="grid">
+      <div class="f-mark"><img src="assets/wordmark.png" alt="WITHOUT WITNESS" width="1500" height="832" loading="lazy"></div>
+      <div class="f-meta">
+        MONOMO · Barcelona (Gràcia)<br>Sense testimoni · Cicle I · 2026<br>Doc v1 · 11.07.2026<br><a href="#00" data-open-dr>DATA ROOM →</a>
+      </div>
+    </div></div>
+  </footer>
+</div>
+
+<!-- ============================ DATA ROOM ============================ -->
+<div id="dataroom" class="view">
+  <header class="dr-mast">
+    <div class="wrap"><div class="grid">
+      <div class="dm-logo"><img src="assets/wordmark.png" alt="WITHOUT WITNESS" width="1500" height="832"></div>
+      <div class="dm-c">Data Room · Cicle I</div>
+      <div class="dm-x"><a class="dr-exit" href="#" data-exit-dr>← Лендинг</a></div>
+    </div></div>
+  </header>
+
+  <div class="dr-body"><div class="wrap"><div class="grid">
+    <nav class="dr-rail" aria-label="Индекс дата-рума">
+      <div class="progress36" id="progress36" aria-hidden="true"></div>
+      <ul class="dr-index" id="drIndex">
+        <li><a href="#00"><span class="ix">00</span> Индекс</a></li>
+        <li><a href="#01"><span class="ix">01</span> Концепция</a></li>
+        <li><a href="#02"><span class="ix">02</span> Протокол</a></li>
+        <li><a href="#03"><span class="ix">03</span> Опен-колл</a></li>
+        <li><a href="#04"><span class="ix">04</span> Правовой пакет</a></li>
+        <li><a href="#05"><span class="ix">05</span> Продакшн</a></li>
+        <li><a href="#06"><span class="ix">06</span> Бюджет</a></li>
+        <li><a href="#07"><span class="ix">07</span> Зин и печать</a></li>
+        <li><a href="#08"><span class="ix">08</span> Айдентика</a></li>
+      </ul>
+    </nav>
+
+    <main class="dr-col">
+
+      <article class="doc" id="00">
+        <div class="doc-mini" aria-hidden="true"><span class="b"></span><span></span><span></span><span class="b"></span><span></span><span></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">00</span> · ИНДЕКС · SENSE TESTIMONI · CICLE I</span></div>
+        <h1 class="doc-h1">Дата-рум WITHOUT WITNESS</h1>
+        <p class="doc-lead"><em>Sense testimoni · опен-колл студии MONOMO, Барселона (Гràсия) · Цикл I</em><br><em>Собрано 11.07.2026 · рабочий язык RU · публичные версии — CA/EN</em></p>
+        <p>Комната документов для коллег, партнёров, участников и площадок. Каждый файл автономен; концепция — источник истины, остальное производно.</p>
+        <h2>Навигация</h2>
+        <div class="tablewrap"><table>
+          <thead><tr><th class="mono">#</th><th>Документ</th><th>Что внутри</th><th>Статус</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">01</td><td><a href="#01">Концепция</a></td><td>идея, что за работа, родословная, что защищать</td><td><span class="chip done"><span class="sq"></span>Утверждено</span></td></tr>
+            <tr><td class="mono">02</td><td><a href="#02">Протокол сессии</a></td><td>операционный регламент + текст протокола-контракта на стене</td><td><span class="chip done"><span class="sq"></span>Ядро зафиксировано</span></td></tr>
+            <tr><td class="mono">03</td><td><a href="#03">Текст опен-колла</a></td><td>публичное приглашение, форма заявки, отбор</td><td><span class="chip work"><span class="sq"></span>Черновик RU</span></td></tr>
+            <tr><td class="mono">04</td><td><a href="#04">Правовой пакет</a></td><td>согласие, GDPR, безопасность данных, лицензия — карта рисков + обязательные фиксы</td><td><span class="chip work"><span class="sq"></span>Карта, до юриста ES</span></td></tr>
+            <tr><td class="mono">05</td><td><a href="#05">Продакшн-план</a></td><td>состояния комнаты, печатный конвейер, панели, вернисаж</td><td><span class="chip work"><span class="sq"></span>Решения P0 открыты</span></td></tr>
+            <tr><td class="mono">06</td><td><a href="#06">Бюджет</a></td><td>вилка расходов без гонораров</td><td><span class="chip work"><span class="sq"></span>Оценка</span></td></tr>
+            <tr><td class="mono">07</td><td><a href="#07">Зин и печать</a></td><td>Jumbo Press: зин + панели, слепой конвейер</td><td><span class="chip work"><span class="sq"></span>Партнёр выбран</span></td></tr>
+            <tr><td class="mono">08</td><td><a href="#08">Айдентика и имя</a></td><td>WITHOUT WITNESS / WIT, коллизии, EUIPO</td><td><span class="chip work"><span class="sq"></span>Имя решено, дизайн TBD</span></td></tr>
+          </tbody>
+        </table></div>
+        <h2>Ключевые решения (зафиксированы)</h2>
+        <ul>
+          <li><strong>Имя:</strong> WITHOUT WITNESS (полная форма). WIT — только графический жест, не самостоятельное имя.</li>
+          <li><strong>Носитель:</strong> цифровая съёмка. «Без свидетеля» обеспечено архитектурой студии: снимает машина, ни один человек не видит кадр, файлы уходят прямо в печать.</li>
+          <li><strong>Замковый камень концепции:</strong> произведение — не панель, а момент её первого раскрытия на вернисаже (автор видит свои 36 кадров впервые, при публике, сам видим в акте первого взгляда).</li>
+          <li><strong>Хост в протоколе:</strong> Николай Григорьев (OOTRO) проходит сессию наравне; владелец не исключён из лишения.</li>
+          <li><strong>Экономика:</strong> без гонораров, без внешнего жюри, отбор непубличный (студия выбирает сама).</li>
+          <li><strong>Масштаб:</strong> 5–8 художников, Цикл I, Барселона.</li>
+          <li><strong>Печать:</strong> Jumbo Press (Барселона, ризо + гикле).</li>
+        </ul>
+        <h2>Открытые решения</h2>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Что</th><th>Где решается</th><th>Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>Юрфиксы до первой подписи (GDPR ст. 7.3, покадровое вето, privacy-пакет)</td><td class="mono"><a href="#04">04</a></td><td><span class="chip block"><span class="sq"></span>Блокер подписи</span></td></tr>
+            <tr><td>Слепой печатный конвейер: как Jumbo Press печатает, не «свидетельствуя»</td><td class="mono"><a href="#05">05</a>, <a href="#07">07</a></td><td><span class="chip block"><span class="sq"></span>P0</span></td></tr>
+            <tr><td>Календарь: приём / сессии / вернисаж</td><td class="mono"><a href="#05">05</a></td><td><span class="chip block"><span class="sq"></span>P0</span></td></tr>
+            <tr><td>Состояния комнаты (съёмка / показ / платный поток) в 18 м²</td><td class="mono"><a href="#05">05</a></td><td><span class="chip block"><span class="sq"></span>P0</span></td></tr>
+            <tr><td>Николай — один из 5–8 или доп. сессия</td><td class="mono"><a href="#01">01</a></td><td><span class="chip work"><span class="sq"></span>Открыто</span></td></tr>
+            <tr><td>Проверка знака EUIPO кл. 41</td><td class="mono"><a href="#08">08</a></td><td><span class="chip work"><span class="sq"></span>До печати айдентики</span></td></tr>
+          </tbody>
+        </table></div>
+        <h2>История разработки</h2>
+        <p>Концепция доведена в несколько кругов экспертной проработки (карьерный совет → нишевые проектировщики опен-коллов → независимая критика → судьи современного искусства). Вердикт судейской панели (4/4): ядро-механика достаточна и неизменна; недоставало одного рамочного хода — возвести первое свидетельствование в статус произведения и включить хоста в протокол. Оба внесены.</p>
+        <div class="docnav"><span></span><a href="#01">Следующий: 01 · Концепция →</a></div>
+      </article>
+
+      <article class="doc" id="01">
+        <div class="doc-mini" aria-hidden="true"><span></span><span class="b"></span><span></span><span></span><span class="b"></span><span></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">01</span> · КОНЦЕПЦИЯ · 01:00:00</span> <span class="chip done"><span class="sq"></span>Утверждено</span></div>
+        <h1 class="doc-h1">Концепция</h1>
+        <h2>Одной строкой</h2>
+        <p class="doc-lead">Художник проводит 180 минут один в закрытой студии перед зеркалом; камера за зеркалом делает ровно 36 кадров в случайные моменты; все 36 кадров каждой сессии выставляются целиком — без отбора и отбраковки; автор впервые видит их на вернисаже, вместе с публикой.</p>
+        <h2>Идея</h2>
+        <p>Протокол отнимает у автопортрета три привычных опоры: <strong>решающий момент</strong> (случайный затвор), <strong>зрителя</strong> (закрытая комната) и <strong>отбор</strong> (показ всего корпуса). Что остаётся — и есть предмет работы.</p>
+        <p>В основе — расщепление свидетеля и записи: <strong>свидетель без записи, запись без свидетеля.</strong> Единственное присутствие в комнате — зеркало — не пишет; единственный пишущий прибор — камера — не смотрит. Съёмку ведёт машина, ни один человек не видит кадры, файлы уходят прямо в печать по слепому конвейеру. «Без свидетеля» — свойство системы, а не обещание.</p>
+        <p><strong>Произведение — не панель, а момент её раскрытия.</strong> Автор впервые встречает свои 36 непойманных кадров на вернисаже, одновременно с публикой, не видев их прежде — и сам оказывается видим в акте этого первого взгляда. Свидетель, изъятый на 180 минут, возвращается залпом. Всё остальное — зеркало, число 36, пустая комната, таймкоды — следствия отсутствия свидетеля, а не отдельные приёмы.</p>
+        <h2>Вопрос, который ставит работа</h2>
+        <p>Что такое автопортрет, когда у снимающегося отняты сразу все корректирующие инстанции — собственный редактирующий глаз, свидетель съёмки, отбирающий куратор? Кому принадлежит авторство, изъятое одновременно у автора, куратора и машины? И что значит «без свидетеля» в тот момент, когда отсутствие свидетеля на вернисаже мгновенно оборачивается максимальным свидетельствованием?</p>
+        <h2>Что защищать любой ценой</h2>
+        <ol>
+          <li><strong>Расщепление «свидетель без записи / запись без свидетеля»</strong> — несводимое к прецедентам концептуальное зерно. Именно оно отличает работу от Ваккари-1972.</li>
+          <li><strong>Первое совместное раскрытие как событие-произведение</strong> — не факт дистрибуции, а сцена, ради которой существует протокол.</li>
+          <li><strong>Отказ от отбора, доведённый до этической симметрии</strong> — покадровое редактирование запрещено обеим сторонам, включая студию; отозванная сессия висит пустой панелью.</li>
+          <li><strong>Саморазоблачение рамки</strong> — хост проходит тот же протокол; работа не оставляет ни одного привилегированного свидетеля.</li>
+        </ol>
+        <h2>Родословная</h2>
+        <ul>
+          <li><strong>Franco Vaccari</strong>, <em>Esposizione in tempo reale n. 4</em> (Венецианская биеннале, 1972) — фотоавтомат без оператора, показ всех лент без отбора; выставка, собирающая себя в реальном времени.</li>
+          <li><strong>Shizuka Yokomizo</strong>, <em>Dear Stranger</em> (1998–2000) — согласие как архитектура съёмки.</li>
+          <li><strong>Tehching Hsieh</strong>, <em>One Year Performance 1980–81</em> — протокол и время как форма.</li>
+          <li><strong>Ugo Mulas</strong>, <em>Verifiche</em> (1971–72) — ролик целиком, без кадрирования опыта.</li>
+          <li><strong>Bernd &amp; Hilla Becher</strong> — типология: единая грамматика показа как одна работа.</li>
+        </ul>
+        <p>Работа обязана превзойти Ваккари по одной оси, которой у него нет: <strong>лишение свидетеля + запрет отбора + первое залповое раскрытие</strong>, превращающие фотоавтомат из аттракциона в аппарат, изымающий автора из позиции свидетеля собственного лица.</p>
+        <h2>Имя</h2>
+        <p>WITNESS с изъятым NESS. Полное имя проекта — <strong>WITHOUT WITNESS</strong>; каталонская строка — <em>Sense testimoni</em>. Сокращение <strong>WIT</strong> живёт только в графическом дизайне (айдентика, вывеска, обложка), не как самостоятельное имя. Детали и коллизии — в <a href="#08">08 · Айдентика</a>.</p>
+        <h2>Стороны и роли</h2>
+        <ul>
+          <li><strong>MONOMO</strong> — автономная студия автопортрета (Гràсия, Барселона; с 2024): организатор, производство, площадка.</li>
+          <li><strong>Николай Григорьев (OOTRO)</strong> — основатель студии; <strong>проходит протокол наравне с приглашёнными художниками.</strong> Его сессия показывается на тех же условиях: слепо, целиком, без отбора. Владелец не исключён из лишения — это часть высказывания, а не жест скромности.</li>
+          <li><strong>Печать и монтаж</strong> — по единому автоматическому регламенту, минуя человеческий предпросмотр (см. <a href="#05">05</a>, <a href="#07">07</a>).</li>
+        </ul>
+        <h2>Масштаб</h2>
+        <p>Цикл I: 5–8 художников, Барселона. Открыто: считать ли сессию Николая одной из 5–8 или дополнительной (влияет только на число панелей и бюджет печати).</p>
+        <div class="docnav"><a href="#00">← 00 · Индекс</a><a href="#02">Следующий: 02 · Протокол →</a></div>
+      </article>
+
+      <article class="doc" id="02">
+        <div class="doc-mini" aria-hidden="true"><span></span><span></span><span class="b"></span><span class="b"></span><span></span><span></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">02</span> · ПРОТОКОЛ СЕССИИ · 180:00:00</span> <span class="chip done"><span class="sq"></span>Ядро зафиксировано</span></div>
+        <h1 class="doc-h1">Протокол сессии</h1>
+        <p class="doc-lead">Двухслойный документ: <strong>операционный регламент</strong> (как студия проводит сессию) и <strong>текст протокола-контракта</strong> (то, что художник подписывает до входа и что экспонируется рядом с панелью). Ядро зафиксировано; менять нельзя без пересмотра концепции.</p>
+        <h2>A. Операционный регламент (внутренний)</h2>
+        <h3>Вход</h3>
+        <ol>
+          <li>Художник сдаёт телефон, часы и любую съёмочную технику.</li>
+          <li>От руки записывает время входа на карточке протокола.</li>
+          <li>Подписывает протокол-контракт (раздел B) при свидетеле-администраторе.</li>
+          <li>Расписание 36 моментов уже сгенерировано машиной, распечатано и запечатано в конверт — художник расписывается на клапане. Конверт не вскрывается никогда.</li>
+          <li>Дверь закрывается.</li>
+        </ol>
+        <h3>180 минут</h3>
+        <ul>
+          <li>Художник один. В комнату можно внести всё, что он принесёт сам (объект, костюм, свет, краска) — кроме собственной съёмочной техники.</li>
+          <li>Свет — один, постоянный, невыключаемый штатно; параметры (CCT, люксы, направление) записаны в протоколе и воспроизводятся над панелью на выставке.</li>
+          <li>Часов в комнате нет.</li>
+        </ul>
+        <h3>36 кадров</h3>
+        <ul>
+          <li>Ровно 36 экспозиций за 180 минут. Число объявлено заранее; моменты не известны никому.</li>
+          <li>Распределение — Пуассон, минимальный интервал 60 секунд, затвор беззвучный и невидимый.</li>
+          <li>Экспозиция камеры фиксирована и не компенсируется. Художник выключил/перекрыл свет — кадры выходят чёрными и печатаются чёрными: чёрный кадр с таймкодом является поступком, не браком.</li>
+          <li>Съёмка цифровая. Файлы шифруются в момент записи; ключ депонируется. Ни студия, ни художник доступа к кадрам не имеют — файлы уходят по автоматическому конвейеру в печать (см. <a href="#05">05</a>, <a href="#07">07</a>).</li>
+        </ul>
+        <h3>Выход</h3>
+        <ul>
+          <li>Выход из комнаты не останавливает протокол: оставшиеся кадры снимают пустую комнату и печатаются наравне со всеми.</li>
+          <li>На выходе художник записывает от руки время выхода.</li>
+        </ul>
+        <h3>Техническая исключающая оговорка (брак vs поступок)</h3>
+        <ul>
+          <li><strong>Печатается как есть:</strong> чёрный кадр, смаз, пустая комната, любой результат действия или бездействия художника.</li>
+          <li><strong>Форс-мажор с переснятием сессии:</strong> сбой карты/камеры, битый файл, отказ конвейера — только техническая неисправность, не «неудачный кадр». Определение брака фиксируется письменно до цикла (см. <a href="#05">05</a>, P0).</li>
+        </ul>
+        <h2>B. Текст протокола-контракта</h2>
+        <blockquote class="obj">
+          <div class="src">Подписывается до входа · экспонируется на стене</div>
+          <p><strong>WITHOUT WITNESS — протокол сессии № __</strong></p>
+          <p>Я вхожу в студию один на 180 минут. Передо мной зеркало, за зеркалом — камера.</p>
+          <p>Камера сделает ровно 36 кадров в моменты, которые не известны никому, включая меня и студию. Я не могу предсказать затвор и не увижу ни одного кадра до открытия выставки.</p>
+          <p>Все 36 кадров будут напечатаны и показаны целиком — в порядке съёмки, с таймкодами, единого размера, без отбора и отбраковки. Ни я, ни студия не выбираем удачные кадры и не редактируем их покадрово.</p>
+          <p>Съёмку ведёт машина. Ни один человек не видит кадры до печати: файлы уходят по автоматическому конвейеру в печатную мастерскую.</p>
+          <p>Я впервые увижу свои 36 кадров на вернисаже, вместе с публикой.</p>
+          <p>Все файлы и панель после выставки — моя собственность. Студия получает неисключительную лицензию на показ в рамках Цикла I и архив проекта.</p>
+          <p>Права, которые за мной сохраняются в любой момент (см. правовой пакет): отзыв согласия на показ; аварийное покадровое вето до вернисажа; удаление файлов.</p>
+          <p>Подпись художника: __________  Время входа (от руки): __:__  Время выхода: __:__<br>Свидетель-администратор: __________  Дата, сессия: __________</p>
+        </blockquote>
+        <blockquote class="note"><p>Примечание для стены: строки согласия, право отзыва и таймкоды входят в экспозицию как часть работы, а не как приложение к ней.</p></blockquote>
+        <h2>Связь с правовым пакетом</h2>
+        <p>Формулировки контракта выше — концептуальные. Юридически обязывающие версии прав (отзыв по GDPR ст. 7.3, покадровое вето, privacy, лицензия) оформляются отдельными документами и имеют приоритет над стеновым текстом при конфликте. См. <a href="#04">04 · Правовой пакет</a>. До первой подписи — вычитка испанским юристом.</p>
+        <div class="docnav"><a href="#01">← 01 · Концепция</a><a href="#03">Следующий: 03 · Опен-колл →</a></div>
+      </article>
+
+      <article class="doc" id="03">
+        <div class="doc-mini" aria-hidden="true"><span></span><span></span><span></span><span class="b"></span><span></span><span class="b"></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">03</span> · ТЕКСТ ОПЕН-КОЛЛА · v3</span> <span class="chip work"><span class="sq"></span>Черновик RU</span></div>
+        <h1 class="doc-h1">Текст опен-колла</h1>
+        <p class="doc-lead">Публичное приглашение. Черновик RU; финальные версии — CA/EN (каталонский обязателен для сцены Гràсии). Тон: приглашение, не конкурс. Запрещённая лексика во всех текстах: «победители», «конкурс», «жюри», «поддержка художников», «благотворительность». Не упоминать метрики аудитории нигде.</p>
+        <h2>Публичный текст (черновик v3)</h2>
+        <blockquote class="obj">
+          <div class="src">WITHOUT WITNESS · Sense testimoni · MONOMO, Гràсия, Барселона</div>
+          <p>Ты входишь в студию один. Дверь закрывается на три часа. Перед тобой зеркало, за зеркалом — камера. Она сделает ровно 36 кадров в моменты, которые не известны никому, включая нас. Позировать некому и незачем.</p>
+          <p>Съёмку ведёт машина. Ни один человек не увидит кадры — они уйдут прямо в печать. Ты сам увидишь свои 36 кадров впервые на открытии выставки, вместе со всеми.</p>
+          <p>Все 36 будут показаны целиком — в порядке съёмки, без отбора и отбраковки. Ни ты, ни мы не выбираем удачные. Правило одно, и оно не нарушается.</p>
+          <p>Что делать эти три часа — единственное, что остаётся тебе.</p>
+          <p>Мы даём студию, съёмку, печать, панель и выставку. Ты даёшь право показать все кадры. Файлы и панель после выставки — твои. За тобой в любой момент сохраняются права отзыва и удаления (условия — в протоколе).</p>
+          <p>Основатель студии проходит тот же протокол наравне с приглашёнными.</p>
+          <p><strong>Заявка:</strong> имя; ссылка на практику; ответ на один вопрос — <em>что ты будешь делать три часа наедине с собой?</em> (до 150 слов, не публикуется).</p>
+          <p>Состав участников определяет студия. Заявка не гарантирует участия.</p>
+        </blockquote>
+        <h2>Форма заявки (три поля)</h2>
+        <ol>
+          <li><strong>Имя.</strong></li>
+          <li><strong>Ссылка на практику</strong> (сайт или профиль — свободная форма).</li>
+          <li><strong>«Что ты будешь делать три часа наедине с собой?»</strong> — до 150 слов. Ответ не публикуется.</li>
+        </ol>
+        <p>Технически — Typeform. <strong>В форме не должно быть ни одного поля про аудиторию, подписчиков или охват.</strong> Причины отказов не сообщаются.</p>
+        <h2>Отбор</h2>
+        <ul>
+          <li>Состав определяет студия, непублично. Без внешнего жюри, без гонораров, без приглашённого куратора.</li>
+          <li>Формула наружу: «приглашаем как гостей; состав определяет студия; причины решений не сообщаются».</li>
+          <li>Вопрос заявки сам сортирует: позёр пишет про контент, художник — про то, что будет делать с собой и временем.</li>
+        </ul>
+        <h2>Заметки к локализации (CA/EN)</h2>
+        <ul>
+          <li>Каталонская версия — первичная для района; строка <em>Sense testimoni</em> обязательна рядом с именем.</li>
+          <li>«WITHOUT WITNESS» не переводить — это имя. Пояснение механики переводить.</li>
+          <li>EN-версия — для интернациональной части сцены Барселоны.</li>
+        </ul>
+        <h2>Открыто</h2>
+        <ul>
+          <li>Даты приёма / сессий / вернисажа — см. <a href="#05">05 · Продакшн</a>. До публикации колла нужен календарь.</li>
+          <li>Строки прав в тексте согласуются с финальным <a href="#04">04 · Правовым пакетом</a>.</li>
+        </ul>
+        <div class="docnav"><a href="#02">← 02 · Протокол</a><a href="#04">Следующий: 04 · Правовой пакет →</a></div>
+      </article>
+
+      <article class="doc" id="04">
+        <div class="doc-mini" aria-hidden="true"><span></span><span></span><span></span><span></span><span class="b"></span><span class="b"></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">04</span> · ПРАВОВОЙ ПАКЕТ</span> <span class="chip work"><span class="sq"></span>Карта, до юриста ES</span></div>
+        <h1 class="doc-h1">Правовой пакет</h1>
+        <div class="callout"><div class="k">Дисклеймер</div><p>Это карта рисков и черновики, а не юридическое заключение. Все документы обязательно вычитывает лицензированный испанский юрист по <strong>propiedad intelectual + protección de datos</strong> до первой подписи. Ссылки на нормы — ориентиры, не гарантии.</p></div>
+        <p>Пакет состоит из четырёх раздельных документов (не сваливать в один «протокол»):</p>
+        <ol>
+          <li>Информированное согласие / релиз (Ley Orgánica 1/1982)</li>
+          <li>GDPR privacy notice</li>
+          <li>Документ о безопасности данных</li>
+          <li>Авторско-правовое соглашение (лицензия)</li>
+        </ol>
+        <h2>Обязательные фиксы до первой подписи (блокеры)</h2>
+        <p>Выявлены на независимой юридической экспертизе. Без них согласие оспоримо целиком.</p>
+        <h3>ФИКС 1 — свободный отзыв согласия (GDPR ст. 7.3)</h3>
+        <p>Отзыв согласия должен быть возможен <strong>в любой момент</strong> и <strong>так же просто, как дача</strong>. Развести два права:</p>
+        <ul>
+          <li><strong>(а) Отзыв согласия на обработку/показ</strong> — безусловный, в любой момент, включая после вернисажа. Последствие: панель снимается/гасится, файлы стираются.</li>
+          <li><strong>(б) «Всё-или-ничего до печати»</strong> — оформить НЕ как отмену права, а как согласованный <strong>формат показа</strong>. Отозванная сессия висит пустой панелью — это художественный жест, а не ограничение права.</li>
+        </ul>
+        <h3>ФИКС 2 — аварийное покадровое вето</h3>
+        <p>Право на достоинство по Ley 1/1982 неотчуждаемо; суд снимет унижающий кадр независимо от подписи. Дать художнику право до вернисажа <strong>затемнить/изъять конкретный кадр</strong>; панель показывает след «кадр изъят субъектом». Концептуально это усиливает работу (видимая самоцензура внутри «показываем всё»), а не разрушает её.</p>
+        <h3>ФИКС 3 — privacy notice + документ о безопасности</h3>
+        <p>Цифровые файлы с изображением лица = персональные данные. Прописать: контроллёр (MONOMO / юрлицо), где хранятся, кто имеет доступ, шифрование, DPA с печатной мастерской (Jumbo Press) и облаком, срок хранения, процедура стирания всех копий включая бэкапы.</p>
+        <h3>ФИКС 4 — технически реальная слепота</h3>
+        <p>«Никто не видит до печати» должно быть техническим фактом, а не обещанием: файлы шифруются на записи, ключ депонируется (конверт/эскроу), у персонала нет доступа к превью. Это одновременно закрывает концепцию («без свидетеля» = свойство системы) и требование безопасности. Опционально — hash-commit (SHA-256 расписания/файлов, публикуется до входа, раскрывается после) для верифицируемости случайности.</p>
+        <h3>ФИКС 5 — протокол полного стирания</h3>
+        <p>Заменить «файлы уничтожаются при художнике» на процедуру: перечислить все места хранения (сервер, бэкап, кэш, мастерская), задать срок (напр. 30 дней после решения), выдать художнику <strong>certificate of deletion</strong>.</p>
+        <h2>Документ 1 · Информированное согласие / релиз (Ley 1/1982)</h2>
+        <p>Ключевые пункты:</p>
+        <ul>
+          <li>Явное письменное согласие (consentimiento expreso, ст. 2.2) на съёмку в непредсказуемые моменты и на публичный показ всех кадров.</li>
+          <li><strong>Абзац информированности:</strong> художник ознакомлен, что содержание кадров заранее неизвестно, включая интимные/невыгодные ракурсы, и что несмотря на формат «всё» он сохраняет право отзыва (ФИКС 1) и аварийного вето (ФИКС 2). Закрывает дыру «согласие на всё, что случайно выйдет».</li>
+          <li>Право на честь, интимность и собственное изображение — неотчуждаемо и отзывно; это указано явно.</li>
+        </ul>
+        <h2>Документ 2 · GDPR privacy notice</h2>
+        <ul>
+          <li>Правовое основание обработки, цели, срок хранения, права субъекта (доступ, стирание ст. 17, отзыв ст. 7.3), контакты контроллёра.</li>
+          <li>Оценить необходимость <strong>DPIA</strong> (систематическая съёмка изображений в приватной обстановке — вероятно да).</li>
+        </ul>
+        <h2>Документ 3 · Безопасность данных</h2>
+        <ul>
+          <li>Шифрование при записи, депонирование ключа, журнал доступа, отсутствие превью у персонала.</li>
+          <li>DPA с Jumbo Press и любым облаком; передача файлов по защищённому каналу.</li>
+          <li>Процедура стирания всех копий + certificate of deletion.</li>
+        </ul>
+        <h2>Документ 4 · Авторско-правовое соглашение</h2>
+        <ul>
+          <li>Автор — художник; все файлы и панель после выставки — его собственность.</li>
+          <li>Студия — <strong>неисключительная, ограниченная во времени</strong> лицензия только на показ в Цикле I и архив.</li>
+          <li>Downstream: после эмбарго публикация свободна обеим сторонам с указанием автора; студия НЕ использует кадры в рекламе/промо платных сессий (пункт-самозапрет — отделяет проект от бренд-активации).</li>
+        </ul>
+        <h2>Особые случаи</h2>
+        <ul>
+          <li><strong>Сессия Николая (хост).</strong> Проходит на тех же условиях; тот же пакет подписывает и он. Важно для симметрии рамки.</li>
+          <li><strong>Пустая комната после выхода.</strong> Кадры без человека — не персональные данные; рисков по изображению нет.</li>
+          <li><strong>Несбалансированность обмена</strong> (нет гонорара + непубличный отбор + коммерческая студия) сама по себе не GDPR-риск, но усиливает возможный аргумент о пороке воли — тем важнее чистота согласия и прав. Тон «не оспаривать» из внутренних документов убрать.</li>
+        </ul>
+        <div class="docnav"><a href="#03">← 03 · Опен-колл</a><a href="#05">Следующий: 05 · Продакшн →</a></div>
+      </article>
+
+      <article class="doc" id="05">
+        <div class="doc-mini" aria-hidden="true"><span class="b"></span><span></span><span></span><span></span><span></span><span class="b"></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">05</span> · ПРОДАКШН-ПЛАН</span> <span class="chip work"><span class="sq"></span>Решения P0 открыты</span></div>
+        <h1 class="doc-h1">Продакшн-план</h1>
+        <p class="doc-lead">Идея физически собираема при малом масштабе (5–8 панелей), но два решения P0 надо закрыть до запуска, иначе красивый регламент ломается о 18 м² и о печатника.</p>
+        <h2>P0 — решения до запуска</h2>
+        <h3>1. Слепой печатный конвейер (кто печатает, не «свидетельствуя»)</h3>
+        <p>Проблема: при цифре кто-то физически печатает 180–288 кадров. Тезис «никто не видит» неисполним in-house.<br><strong>Решение:</strong> печать у внешней мастерской — <strong>Jumbo Press</strong> (Барселона). Техник вне арт-контекста = переопределённый «не-свидетель»; файлы уходят зашифрованными по автоматическому конвейеру, отпечатки возвращаются запечатанными. Это и есть «слепой конвейер by design». Детали спеки — <a href="#07">07 · Зин и печать</a>.<br><strong>Дописать в манифест честную формулировку «свидетеля»:</strong> машинная печать промышленным оператором не является свидетельствованием в смысле работы.</p>
+        <h3>2. Состояния комнаты в календаре (три несовместимых режима в 18 м²)</h3>
+        <ul>
+          <li><strong>Съёмка:</strong> пустая комната, художник один, зеркало и камера. ~8–9 сессий × 3 ч = <strong>~24–27 часов эксклюзива</strong>, блокирующих платные сессии.</li>
+          <li><strong>Показ:</strong> стены закрыты панелями, включая стену с зеркалом → сам продукт автопортрета временно отключён.</li>
+          <li><strong>Платный поток</strong> (65–85 EUR) несовместим с обоими.</li>
+        </ul>
+        <p><strong>Решение:</strong> развести по календарю блоками; заложить упущенную выручку экспозиционного периода в бюджет (при ~75 EUR и ~4 сессиях/день даже 2 недели простоя = сотни–тысячи EUR). Цифру простоя посчитать до запуска.</p>
+        <h3>3. Техническая исключающая оговорка</h3>
+        <p>Письменно определить, что считается браком носителя (corrupt / сбой камеры / отказ конвейера — переснять) и что печатается как есть (чёрный кадр, смаз, пустая комната). Без этого один сбой карты убивает панель без права починки. См. <a href="#02">02 · Протокол</a>, раздел A.</p>
+        <h3>4. Спецификация печати и панели</h3>
+        <p>Драйвер стоимости и срока. Решить: 36 отдельных отпечатков на подложке (dibond/foamboard) vs композит-один-файл; размер кадра; тип монтажа. Лаб + монтаж ≈ 1–2 недели.</p>
+        <h2>Спецификация панели</h2>
+        <ul>
+          <li>Один художник = одна панель = 36 кадров в порядке съёмки.</li>
+          <li>Единый малый размер, без увеличений и кадрирования, фиксированная сетка.</li>
+          <li>Таймкоды под каждым кадром; по краям панели — два рукописных времени (вход/выход).</li>
+          <li>Панель на высоте зеркала. Свет зала повторяет свет комнаты (измерить CCT/люксы/направление съёмочного режима, воспроизвести — но поднять до читаемого для просмотра уровня).</li>
+          <li>Рядом с панелью: подписанный протокол-контракт + запечатанный конверт случайности (+ опц. напечатанный hash-commit).</li>
+          <li><strong>Отозванная сессия:</strong> пустая панель того же размера, номер сессии, строка протокола об отзыве. Нумерация цикла сквозная.</li>
+        </ul>
+        <h2>Вернисаж — событие первого раскрытия</h2>
+        <p>Это центр работы (см. <a href="#01">01 · Концепция</a>), а не финальный показ. Постановка:</p>
+        <ul>
+          <li>Художники встречают свои 36 кадров впервые здесь, при публике. По возможности — момент, когда панели открываются, срежиссирован как событие (до этого закрыты/зачехлены).</li>
+          <li>Художник видим в акте первого взгляда — это часть экспозиции, не кулуары.</li>
+          <li>Формат — по тайм-слотам / rolling entry: 18 м² комфортно вмещают ~12 человек, предел ~15–25. Интимность как черта, не баг.</li>
+          <li>Вино + электрика + люди в тесноте — вопрос страховки и пожарного комфорта: учесть.</li>
+        </ul>
+        <h2>Календарь (предложение совета — требует утверждения)</h2>
+        <p>Осенний, не августовский: август в Барселоне мёртв институционально, Festa Major de Gràcia (15–21.08) ломает тишину комнаты. Ориентир:</p>
+        <ul>
+          <li>Колл в эфир — до 25.07</li>
+          <li>Приём заявок — до 06.09 (окно 6+ недель)</li>
+          <li>Сессии — 21.09–16.10 (после Festa Major, комната молчит)</li>
+          <li>Вернисаж — 22–23.10</li>
+          <li>(опц.) кураторский показ второго такта — середина ноября</li>
+        </ul>
+        <p>Даты — <strong>TBD, требуют твоего решения.</strong> Проверить точные даты Festa Major и городского арт-календаря перед публикацией.</p>
+        <div class="docnav"><a href="#04">← 04 · Правовой пакет</a><a href="#06">Следующий: 06 · Бюджет →</a></div>
+      </article>
+
+      <article class="doc" id="06">
+        <div class="doc-mini" aria-hidden="true"><span></span><span class="b"></span><span></span><span class="b"></span><span></span><span></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">06</span> · БЮДЖЕТ · EUR</span> <span class="chip work"><span class="sq"></span>Оценка</span></div>
+        <h1 class="doc-h1">Бюджет</h1>
+        <p class="doc-lead">Без гонораров художникам (решено). Вилка на Цикл I, 5–8 панелей. Валюта — EUR. Оценка, не смета.</p>
+        <h2>Прямые расходы</h2>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Статья</th><th class="num">DIY / мин.</th><th class="num">Аккуратно</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td>Печать кадров (180–288 шт)</td><td class="num">300–500</td><td class="num">500–800</td><td>гикле HP Z9+ у Jumbo Press; ~1–2 EUR/шт малый формат</td></tr>
+            <tr><td>Панели/подложка + монтаж (5–8)</td><td class="num">150–650</td><td class="num">650–1 100</td><td>foamboard DIY ~15–25/шт vs dibond ~40–80/шт</td></tr>
+            <tr><td>Крепёж/подвес</td><td class="num">100–200</td><td class="num">200</td><td></td></tr>
+            <tr><td>Свет/диммеры (зал = комната)</td><td class="num">100–300</td><td class="num">300</td><td>измерить и воспроизвести режим</td></tr>
+            <tr><td>Печать протоколов, рамки, конверты</td><td class="num">50–100</td><td class="num">100</td><td>физобъекты сессии</td></tr>
+            <tr><td>Зин (ризо, Jumbo Press)</td><td class="num">400–700</td><td class="num">700–1 000</td><td>тираж 100–150; см. <a href="#07">07</a></td></tr>
+            <tr><td>Вернисаж (вино/кейтеринг)</td><td class="num">150–300</td><td class="num">300</td><td>по тайм-слотам</td></tr>
+            <tr><td>Айдентика/винил/тайтл-стена</td><td class="num">100–250</td><td class="num">250–400</td><td>см. <a href="#08">08</a></td></tr>
+            <tr class="total"><td><strong>Итого прямых</strong></td><td class="num"><strong>1 350–3 000</strong></td><td class="num"><strong>3 000–4 200</strong></td><td></td></tr>
+          </tbody>
+        </table></div>
+        <h2>Скрытая статья — упущенная выручка</h2>
+        <p>Экспозиционный период + часы съёмок = коммерческий простой студии (см. <a href="#05">05</a>, P0-2). При ~75 EUR/сессия и ~4 сессиях/день:</p>
+        <ul>
+          <li>Съёмки цикла: ~24–27 ч эксклюзива ≈ ~9 сессий ≈ <strong>~675 EUR</strong> недополучено.</li>
+          <li>Экспозиционный период: зависит от длительности показа — <strong>посчитать по календарю до запуска.</strong></li>
+        </ul>
+        <p>Это не расход, но реальная цена; для честного разговора с партнёрами держать в бюджете отдельной строкой.</p>
+        <h2>Юридические/консультационные</h2>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Статья</th><th>Оценка</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td>Вычитка правового пакета юристом ES</td><td class="mono">по факту</td><td>обязательна до первой подписи (см. <a href="#04">04</a>)</td></tr>
+            <tr><td>Проверка знака EUIPO кл. 41</td><td class="mono">по факту</td><td>до печати айдентики (см. <a href="#08">08</a>)</td></tr>
+          </tbody>
+        </table></div>
+        <h2>Ноль-строки (принципиально)</h2>
+        <ul>
+          <li>Гонорары художникам — 0 (решено).</li>
+          <li>Внешнее жюри — 0 (нет).</li>
+          <li>Приглашённый куратор — 0 (нет).</li>
+        </ul>
+        <h2>Итоговая рамка</h2>
+        <p>Реалистичный самозапуск: <strong>~1 500–2 000 EUR прямых</strong> + осознанная упущенная выручка. Аккуратная версия с плотным зином и dibond-панелями — <strong>до ~4 000 EUR</strong>. Числа Jumbo Press уточняются запросом сметы (см. <a href="#07">07</a>).</p>
+        <div class="docnav"><a href="#05">← 05 · Продакшн</a><a href="#07">Следующий: 07 · Зин и печать →</a></div>
+      </article>
+
+      <article class="doc" id="07">
+        <div class="doc-mini" aria-hidden="true"><span></span><span></span><span class="b"></span><span></span><span class="b"></span><span></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">07</span> · ЗИН И ПЕЧАТЬ · JUMBO PRESS</span> <span class="chip work"><span class="sq"></span>Партнёр выбран</span></div>
+        <h1 class="doc-h1">Зин и печать — Jumbo Press</h1>
+        <p class="doc-lead">Печатный партнёр для зина и, вероятно, панелей — <strong>Jumbo Press</strong> (Барселона). Один партнёр закрывает и издание, и производственный блокер «слепого конвейера».</p>
+        <h2>Партнёр</h2>
+        <ul>
+          <li><strong>Jumbo Press</strong> — независимая рисограф-студия и издательская платформа. Основана в 2018 (Jake Lucas, Marta Font); начиналась в Дептфорде (Лондон), переехала в Барселону.</li>
+          <li>Оборудование: <strong>рисограф MH9350</strong> (два барабана) для ризо; <strong>HP DesignJet Z9+</strong> для гикле.</li>
+          <li>Соевые чернила, переработанная/сертифицированная бумага. Малотиражные артист-эдишены, зины, объекты; работают и как печатный сервис для сторонних авторов.</li>
+          <li>Instagram: <a href="https://www.instagram.com/jumbopress/" target="_blank" rel="noopener">@jumbopress</a> · сайт: <a href="https://www.jumbo-press.com/" target="_blank" rel="noopener">jumbo-press.com</a></li>
+        </ul>
+        <h2>Зачем именно они — двойная роль</h2>
+        <ol>
+          <li><strong>Издание зина</strong> — их профиль (ризо, малые тиражи артист-буков) прямо совпадает с итогом опен-колла.</li>
+          <li><strong>Слепой печатный конвейер</strong> — внешняя мастерская, техник вне арт-контекста; печатает как промышленный оператор, не «свидетель». Это разрешает продакшн-блокер (см. <a href="#05">05</a>, P0-1) и держит концепцию «без свидетеля» технически честной.</li>
+        </ol>
+        <h2>Разделение носителей</h2>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Носитель</th><th>Что печатать</th><th>Почему</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">Гикле (HP Z9+)</td><td>панели цикла — 36 кадров ×(5–8), фотографическая точность, чёрный печатается чёрным</td><td>выставочное качество, единый размер, фиксированная сетка</td></tr>
+            <tr><td class="mono">Ризо (MH9350)</td><td>зин по итогам цикла</td><td>тактильность, тираж, культурный код малотиражного издания; ограничение палитры ризо — черта, а не дефект</td></tr>
+          </tbody>
+        </table></div>
+        <h2>Спецификация зина (черновик)</h2>
+        <ul>
+          <li><strong>Содержание:</strong> полный протокол; текст концепции; по развороту на каждого художника (36 кадров сессии) + сессия Николая наравне; факсимиле подписанного протокола; таймкоды; пустой разворот с номером — для отозванной сессии.</li>
+          <li><strong>Тираж:</strong> 100–150. Часть — участникам, часть — в продажу/рассылку.</li>
+          <li><strong>Колофон:</strong> «WITHOUT WITNESS — Cycle I, MONOMO, Barcelona, 2026»; печать Jumbo Press.</li>
+          <li><strong>Что зин НЕ делает:</strong> не отбирает «лучшие» кадры — тот же закон, что и на стене; все 36 каждой сессии.</li>
+        </ul>
+        <h2>Открыто (до сметы)</h2>
+        <ul>
+          <li>Запросить у Jumbo Press смету на: гикле-печать 180–288 кадров (малый формат) + ризо-зин 100–150 экз.</li>
+          <li>Уточнить, берут ли они <strong>зашифрованную передачу файлов + DPA</strong> (нужно для <a href="#04">04 · Правового пакета</a>, ФИКС 3): печать по автоматическому конвейеру без предпросмотра — операционно подтвердить с ними.</li>
+          <li>Формат зина (размер, число красок ризо, бумага) — под их возможности и бюджет <a href="#06">06</a>.</li>
+        </ul>
+        <div class="docnav"><a href="#06">← 06 · Бюджет</a><a href="#08">Следующий: 08 · Айдентика →</a></div>
+      </article>
+
+      <article class="doc" id="08">
+        <div class="doc-mini" aria-hidden="true"><span class="b"></span><span></span><span class="b"></span><span></span><span></span><span></span></div>
+        <div class="doc-grief"><span class="g"><span class="num">08</span> · АЙДЕНТИКА И ИМЯ</span> <span class="chip work"><span class="sq"></span>Имя решено, дизайн TBD</span></div>
+        <h1 class="doc-h1">Айдентика и имя</h1>
+        <h2>Решение по имени</h2>
+        <ul>
+          <li><strong>Полное имя проекта — WITHOUT WITNESS.</strong> Поисково и юридически чисто (независимый арт-проект с таким названием не найден).</li>
+          <li><strong>Каталонская строка — <em>Sense testimoni</em></strong> — обязательна рядом с именем для сцены Гràсии.</li>
+          <li><strong>WIT — только графический жест</strong>, живёт внутри айдентики (слово WITNESS с изъятым/зачёркнутым NESS), не как самостоятельная вывеска, домен или «WIT Barcelona/Gràcia».</li>
+          <li>Домен и хэндлы — по полной форме (напр. <code>withoutwitness.*</code>), не <code>wit.*</code>.</li>
+        </ul>
+        <h2>Почему не голое «WIT» — реальные коллизии (веб-проверка)</h2>
+        <p>Голое трёхбуквенное WIT в Испании непригодно ни поисково, ни репутационно:</p>
+        <ul>
+          <li><strong>WIT Salon &amp; Barber</strong> — парикмахерская в самой Гràсии (Carrer de l'Església 4).</li>
+          <li><strong>WIT ART GALLERY</strong>, Мадрид — действующая галерея (Artsy, @witartgallery): тот же сектор, та же страна — риск по знаку.</li>
+          <li><strong>WIT Barcelona</strong> (witbarcelona.com, «We Innovate Together») — занимает связку WIT+Barcelona.</li>
+          <li><strong>WIT Architects S.L.P.</strong> — бюро в Барселоне.</li>
+          <li>Глобально: Wit Studio (аниме), WIT = Women in Technology, пьеса «Wit» (регистр «остроумие», не тот тон).</li>
+        </ul>
+        <p>Вывод: WIT читается как «остроумие/парикмахерская», а не «without witness»; имя, живущее только со сноской, дефектно как самостоятельное. Отсюда — полная форма как имя, WIT как графика.</p>
+        <h2>Типографический жест</h2>
+        <p>Основной ход: <strong>WITNESS с вычеркнутым/выпавшим NESS</strong> — вычитание показано глазу, а не объясняется. Читается как исполнение самой механики (из свидетеля что-то изъято). Применение: логотип, вывеска, обложка зина, тайтл-стена выставки.</p>
+        <h2>Проверки</h2>
+        <ul>
+          <li><strong>EUIPO класс 41</strong> — проверить регистрируемость «WITHOUT WITNESS» из-за мадридской WIT ART GALLERY (та же отрасль/юрисдикция). Для полной формы риск оценочно низкий, но проверить до печати айдентики.</li>
+          <li><strong>Домены/хэндлы</strong> — занять по полной форме заранее.</li>
+        </ul>
+        <h2>Носители айдентики (задача дизайна — TBD)</h2>
+        <ul>
+          <li>Логотип (жест вычёркивания NESS), тайтл-стена выставки, винил на двери студии.</li>
+          <li>Обложка и вёрстка зина (совместимо с ризо Jumbo Press — см. <a href="#07">07</a>).</li>
+          <li>Шаблон панели: подпись сессии, таймкоды, поля для рукописных времён.</li>
+          <li>Публичная страница опен-колла (текст — <a href="#03">03</a>).</li>
+        </ul>
+        <h2>Тон и лексика (сквозное правило)</h2>
+        <p>Во всех текстах и графике запрещены: «победители», «конкурс», «жюри», «поддержка художников», «благотворительность», любые метрики аудитории. Разрешено: «протокол», «сессия», «приглашённые художники», «Цикл I».</p>
+        <div class="docnav"><a href="#07">← 07 · Зин и печать</a><a href="#00">В индекс: 00 →</a></div>
+      </article>
+
+    </main>
+
+    <aside class="dr-margin" aria-hidden="true">
+      <div class="mnote">SENSE TESTIMONI<br>CICLE I · 2026<br>——<br>DOC v1<br>11.07.2026</div>
+    </aside>
+  </div></div></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var landing=document.getElementById('landing');
+  var dataroom=document.getElementById('dataroom');
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var savedScroll=0, lastTrigger=null;
+  var DOC_IDS=['00','01','02','03','04','05','06','07','08'];
+
+  function buildSheet(el){
+    if(!el) return;
+    var frag=document.createDocumentFragment();
+    for(var i=0;i<36;i++){
+      var c=document.createElement('div'); c.className='cell';
+      var f=document.createElement('div'); f.className='fill'; c.appendChild(f);
+      var t=document.createElement('div'); t.className='ct';
+      var sc=i*300; t.textContent=String(Math.floor(sc/3600)).padStart(3,'0')+':'+String(Math.floor(sc%3600/60)).padStart(2,'0')+':'+String(sc%60).padStart(2,'0');
+      c.appendChild(t); frag.appendChild(c);
+    }
+    el.appendChild(frag);
+  }
+  var genomeSheet=document.getElementById('genomeSheet');
+  var revealSheet=document.getElementById('revealSheet');
+  buildSheet(genomeSheet); buildSheet(revealSheet);
+
+  function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+  function blackSet(){var rnd=mulberry32(180036),set={},keys=[];while(keys.length<9){var k=Math.floor(rnd()*36);if(!(k in set)){set[k]=1;keys.push(k);}}return set;}
+
+  var revealed=false;
+  function doReveal(){
+    if(revealed||!revealSheet) return; revealed=true;
+    var cells=revealSheet.querySelectorAll('.cell');
+    revealSheet.classList.remove('sealed'); revealSheet.classList.add('reveal');
+    var black=blackSet();
+    if(reduce){ cells.forEach(function(c,i){ if(!(i in black)) c.classList.add('open'); }); return; }
+    var order=[]; for(var i=0;i<36;i++){ if(!(i in black)) order.push(i); }
+    var rnd=mulberry32(360118);
+    for(var j=order.length-1;j>0;j--){var k=Math.floor(rnd()*(j+1));var tmp=order[j];order[j]=order[k];order[k]=tmp;}
+    order.forEach(function(idx,n){ setTimeout(function(){ cells[idx].classList.add('open'); }, 260+n*62); });
+  }
+  if('IntersectionObserver' in window && revealSheet){
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ doReveal(); ro.disconnect(); } });},{threshold:.3});
+    ro.observe(document.getElementById('revealSection'));
+    setTimeout(doReveal, 2600);
+  } else { doReveal(); }
+
+  var rises=document.querySelectorAll('.rise');
+  function revealAll(){ rises.forEach(function(el){el.classList.add('in');}); }
+  if('IntersectionObserver' in window && !reduce){
+    var rObs=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); rObs.unobserve(e.target);} });},{threshold:.1});
+    rises.forEach(function(el){rObs.observe(el);});
+    setTimeout(revealAll, 1600);
+  } else { revealAll(); }
+
+  function rollTc(el){
+    var target=el.getAttribute('data-tc'); if(!target||reduce) return;
+    var parts=target.split(':').map(Number); var total=parts[0]*3600+parts[1]*60+parts[2];
+    var start=null,dur=480; var tail=el.textContent.replace(/^[0-9:]+/,'');
+    function fmt(s){var h=Math.floor(s/3600),m=Math.floor(s%3600/60),ss=Math.floor(s%60);return String(h).padStart(3,'0')+':'+String(m).padStart(2,'0')+':'+String(ss).padStart(2,'0');}
+    function step(ts){ if(!start)start=ts; var p=Math.min(1,(ts-start)/dur); el.textContent=fmt(total*p)+tail; if(p<1)requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var tcEls=document.querySelectorAll('[data-tc]');
+  if('IntersectionObserver' in window){
+    var tObs=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ rollTc(e.target); tObs.unobserve(e.target);} });},{threshold:.6});
+    tcEls.forEach(function(el){tObs.observe(el);});
+  }
+
+  function isDocHash(h){ return /^#0[0-8]$/.test(h); }
+  function showLanding(){
+    document.documentElement.classList.remove('deeplink');
+    dataroom.classList.remove('active'); landing.classList.add('active');
+    window.scrollTo({top:savedScroll,behavior:'auto'});
+    if(lastTrigger){ try{lastTrigger.focus({preventScroll:true});}catch(e){} lastTrigger=null; }
+  }
+  function showDataroom(hash){
+    if(landing.classList.contains('active')) savedScroll=window.scrollY;
+    landing.classList.remove('active'); dataroom.classList.add('active');
+    var id=(hash&&isDocHash(hash))?hash.slice(1):'00';
+    var target=document.getElementById(id);
+    if(target) target.setAttribute('tabindex','-1');
+    function place(){
+      if(target){ if(id==='00'){ window.scrollTo({top:0,behavior:'auto'}); } else { target.scrollIntoView({block:'start',behavior:'auto'}); } }
+      setActiveIndex(id); onScrollDR();
+    }
+    place(); setTimeout(place,110);
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(place); }
+    if(target){ try{target.focus({preventScroll:true});}catch(e){} }
+  }
+  function route(){ if(isDocHash(location.hash)) showDataroom(location.hash); else showLanding(); }
+  window.addEventListener('hashchange',route);
+
+  document.querySelectorAll('[data-open-dr]').forEach(function(a){
+    a.addEventListener('click',function(){ if(landing.classList.contains('active')){ savedScroll=window.scrollY; lastTrigger=a; } });
+  });
+  document.querySelectorAll('[data-exit-dr]').forEach(function(a){
+    a.addEventListener('click',function(e){ e.preventDefault(); history.pushState('',document.title,location.pathname+location.search); showLanding(); });
+  });
+
+  var indexLinks=document.querySelectorAll('#drIndex a');
+  function setActiveIndex(id){
+    var act=null;
+    indexLinks.forEach(function(a){ var on=a.getAttribute('href')==='#'+id; a.classList.toggle('active',on); if(on) act=a; });
+    if(act && window.matchMedia('(max-width:640px)').matches){ try{act.scrollIntoView({inline:'center',block:'nearest'});}catch(e){} }
+  }
+  var prog=document.getElementById('progress36');
+  if(prog){ for(var i=0;i<36;i++){ prog.appendChild(document.createElement('span')); } }
+  var progCells=prog?prog.querySelectorAll('span'):[];
+  var docs=DOC_IDS.map(function(id){return document.getElementById(id);});
+  function onScrollDR(){
+    if(!dataroom.classList.contains('active')) return;
+    var mid=window.scrollY+window.innerHeight*0.32, cur='00';
+    docs.forEach(function(d){ if(d && d.offsetTop<=mid) cur=d.id; });
+    setActiveIndex(cur);
+    var p=(window.scrollY)/(document.documentElement.scrollHeight-window.innerHeight||1);
+    var filled=Math.round(p*36);
+    for(var k=0;k<progCells.length;k++){ progCells[k].classList.toggle('on',k<filled); progCells[k].classList.toggle('cur',k===filled-1); }
+  }
+  window.addEventListener('scroll',onScrollDR,{passive:true});
+
+  document.querySelectorAll('#dataroom a[href^="#0"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href').slice(1); if(!isDocHash('#'+id)) return;
+      e.preventDefault(); var t=document.getElementById(id);
+      if(t){ t.scrollIntoView({block:'start',behavior:reduce?'auto':'smooth'}); }
+      history.replaceState(null,'','#'+id); setActiveIndex(id);
+    });
+  });
+
+  route();
+})();
+</script>
+</body>
+</html>
