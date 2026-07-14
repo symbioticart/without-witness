@@ -62,7 +62,7 @@ img{max-width:100%; display:block}
 .mast .m-logo{grid-column:span 8; display:flex; align-items:center}
 .mast .m-logo img{height:26px; width:auto}
 .mast .m-brand{grid-column:14 / 24; text-align:center; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#8C8474}
-.mast .m-cta{grid-column:28 / 37; display:flex; justify-content:flex-end}
+.mast .m-cta{grid-column:28 / 37; display:flex; justify-content:flex-end; gap:6px; align-items:center}
 .btn{font-family:var(--mono); font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg);
   border:1px solid currentColor; background:transparent; padding:11px 18px; cursor:pointer; text-decoration:none;
   display:inline-flex; align-items:center; gap:10px; transition:background .2s,color .2s}
@@ -71,6 +71,9 @@ img{max-width:100%; display:block}
 .btn:focus-visible{outline:2px solid var(--oxide); outline-offset:2px}
 .mast .btn{border-color:#3A352D; color:#ECE4D6}
 .mast .btn:hover{background:#ECE4D6; color:#0C0B09}
+.lang{font-family:var(--mono); font-size:13px; letter-spacing:.1em; text-decoration:none; color:currentColor; opacity:.62; padding:10px 10px; transition:opacity .2s}
+.lang:hover,.lang:focus-visible{opacity:1; outline:none}
+.lang:focus-visible{outline:2px solid var(--oxide); outline-offset:2px}
 
 /* ---------- HERO ---------- */
 .hero{min-height:92vh; display:flex; align-items:center}
@@ -171,7 +174,7 @@ img{max-width:100%; display:block}
 .dr-mast .grid{align-items:center; padding-block:14px}
 .dr-mast .dm-logo{grid-column:span 8; display:flex; align-items:center} .dr-mast .dm-logo img{height:30px; width:auto; flex:0 0 auto}
 .dr-mast .dm-c{grid-column:14 / 24; text-align:center; font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
-.dr-mast .dm-x{grid-column:28 / 37; display:flex; justify-content:flex-end}
+.dr-mast .dm-x{grid-column:28 / 37; display:flex; justify-content:flex-end; gap:6px; align-items:center}
 .dr-exit{font-family:var(--mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:1px solid var(--line); padding:9px 15px; transition:color .2s,border-color .2s}
 .dr-exit:hover{color:var(--fg); border-color:var(--faint)}
 .dr-body{padding-bottom:120px}
@@ -270,7 +273,7 @@ a:focus-visible,button:focus-visible,.dr-index a:focus-visible,.dr-exit:focus-vi
     <div class="wrap"><div class="grid">
       <div class="m-logo"><img src="assets/wordmark.png" alt="WITHOUT WITNESS" width="1500" height="832"></div>
       <div class="m-brand">Sense testimoni · Cicle I</div>
-      <div class="m-cta"><a class="btn" href="#00" data-open-dr><span class="dot"></span>DATA ROOM</a></div>
+      <div class="m-cta"><a class="lang" href="/es" title="Versión en español">ES</a><a class="btn" href="#00" data-open-dr><span class="dot"></span>DATA ROOM</a></div>
     </div></div>
   </header>
 
@@ -381,7 +384,7 @@ a:focus-visible,button:focus-visible,.dr-index a:focus-visible,.dr-exit:focus-vi
     <div class="wrap"><div class="grid">
       <div class="dm-logo"><img src="assets/wordmark.png" alt="WITHOUT WITNESS" width="1500" height="832"></div>
       <div class="dm-c">Data Room · Cicle I</div>
-      <div class="dm-x"><a class="dr-exit" href="#" data-exit-dr>← Лендинг</a></div>
+      <div class="dm-x"><a class="lang" href="/es#00" title="Versión en español">ES</a><a class="dr-exit" href="#" data-exit-dr>← Лендинг</a></div>
     </div></div>
   </header>
 
